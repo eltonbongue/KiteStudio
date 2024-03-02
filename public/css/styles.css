@@ -1,9 +1,326 @@
- * {
+/*General*/
+*{
 
-    font-family:  'Roboto';
+    font-family: 'Roboto';
 }
+
+
+
+
+body{
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+header {
+
+    display: flex;
+  /*justify-content: space-between;*/ 
+   justify-content: flex-end;
+    align-items: center;
+    padding: 15px 15px;
+    background-color: #353E48;
+    margin-bottom: 108px;
+}
+
+
+#logo{
+    text-decoration: none;
+    color:#1CB0ED;
+    padding: 10px;
+    border: 5px solid  #fff;
+    border-radius: 90px;
+}
+.logotipo{
+
+    font-size: 35px;
+    margin-right: auto;
+}
+
+.nav-links{
+
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a:hover{
+
+color: aquamarine;
+}
+
+@media( max-width:800px){
+
+    li,a{
+        font-size: 12px;
+    }
+
+    .logotipo{
+        font-size: 22px;
+    }
+
+
+}
+
+/*sobre*/
+#pprincipal{
+    text-align:justify;
+    margin: 50px;
+    color:gray;
+  }
+
+
+
+    .servicos{
+      border: 0.5px solid white; 
+      margin: 15px;
+      background-color: white;
+      padding: 50px;
+    }
+
+  
+#Mz-title{
+  color: whitesmoke;
+}
+
+
+/*trabalhos*/
+
+.pprincipal{
+    text-align:center;
+    margin: 4px;
+    color:gray;
+  }
+
+
+
+    .servicos{
+      border: 0.5px solid white; 
+      margin: 10px;
+      background-color: white;
+      padding: 50px;
+    }
+
+
+
+/*fim trabalho*/
+
+
 
 #navbar img {
     
     width: 40px;
 }
+
+
+.container{
+
+    margin: 0px;
+}
+
+.row{
+    margin: 0;
+}
+
+
+.container-fluid{
+
+    padding: 0;
+}
+
+#botao:hover {
+
+    background-color: #f2A340;
+    border:2px solid #c28008;
+    
+}
+
+*/Navbar/
+
+#navbar img {
+    border: 5px solid black;
+    border-radius: 90px;
+}
+
+#navbar{
+    justify-content: space-between;
+    background-color:#fff;
+    padding: 5px 0;
+}
+
+#navbar a{
+    font-size: 16px;
+    color:#757575;
+}
+
+#navbar a:hover{
+color: #13444d;
+
+}
+
+
+/*Events list*/
+
+#events-container {
+padding: 50px;
+
+}
+
+#events-container h2{
+margin-bottom: 10px;
+}
+
+#events-container .subtitle{
+color:#757575;
+margin-bottom: 30px;
+}
+
+#cards-container{
+display: flex;
+}
+
+#events-container .card{
+flex: 1 1 24%;
+max-width: 25%;
+border-radius: 10px;
+padding: 0;
+margin: 2.5%;
+}
+
+#events-container img{
+max-height: 150px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+}
+
+.card .card-date{
+
+font-size: 12px;
+color: #04030F;
+
+}
+
+.card .card-title{
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+footer{
+text-align: center;
+background-color: #353E48;
+color: #fff;
+padding: 30px;
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+
+/*Event create page*/
+#event-create-container{
+    padding: 30px;
+}
+
+#event-create-container label{
+font-weight: bold;
+}
+
+#event-create-container input,
+#event-create-container select,
+#event-create-container textarea{
+    font-size: 12px;
+}
+
+
+.msg{
+    
+background-color: #d4edda;
+color: #155424;
+border: 1px solid #c3e6cb;
+width: 100%;
+margin-bottom: 0;
+text-align: center;
+padding: 10px;
+
+}
+
+/* Edit Page*/
+.img-preview{
+width: 100px;
+margin-top: 20px;
+
+}
+
+footer p{
+    margin-bottom: 0;
+}
+
+
+/*Dashboard*/
+.dashboard-title-container{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.dashboard-events-container th{
+    width: 25%;
+}
+.dashboard-events-container form{
+    display: inline-block;
+}
+
+/*Event page*/
+#image-container, #info-container{
+    margin-top: 30px;
+}
+
+#image-container img{
+border-radius: 10px;
+}
+
+
+#info-container h1{
+    font-size: 36px;
+    font-weight: 900;
+}
+
+
+#info-container p{
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+}
+
+#info-container h3,
+#description-container h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#info-container ion-icon{
+    font-size: 20px;
+    color: #f2A340;
+    margin-right: 5px;
+}
+
+
+#info-container #event-submit {
+    margin: 20px 0;
+}
+
+
+li,a {
+font-size: 14px;
+color: #fff;
+text-decoration: none;
+
+}
+

@@ -14,16 +14,37 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\ProdutoController;
 
 Route::get('/', [EventController::class, 'index']);
-Route::get('/events/create', [EventController::class, 'create']);
+Route::get('/admin/evento', [EventController::class, 'create']);
+Route::post('/admin',[EventController::class,'store']);
+Route::get('/evento/{id}',  [EventController::class,'show']);
 
-Route::get('/trabalhos.blade.php', function () {
-    return view('trabalhos');
+Route::get('trabalhos.blade.php', [EventController::class, 'work']);
+
+Route::get('admin/dashboard_admin.blade.php', function () {
+    return view('admin/dashboard_admin');
 });
 
-Route::get('/login.blade.php', function () {
-    return view('login');
+Route::get('auth/register.blade.php', function () {
+
+    return view('auth/register');
+});
+
+Route::get('admin/users.blade.php', function () {
+
+    $U="active";
+    $E="#"; 
+
+    return view('admin/users' , ['U' => $U],['E' => $E]);
+});
+
+Route::get('admin/evento.blade.php', function () {
+
+         $E="active";   
+         $U="#";
+    return view('admin/evento', ['E' => $E],['U' => $U]);
 });
 
 Route::get('/sobre.blade.php', function () {
@@ -36,3 +57,13 @@ Route::get('/contactos.blade.php', function () {
 
 
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

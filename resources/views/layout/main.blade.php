@@ -18,51 +18,83 @@
     <body>
 
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="collapse navbar-collapse" id="navbar">
-                   
-                    <a href="" class="navbar-brand">
-                        <img src="/img/letra-k.png" alt="KiteStudio">
-                    </a>
-
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
+            <span class="logotipo"><a href="" id="logo">KiteStudio</a></span>
+            <nav>
+                 
+                    <ul class="nav-links">
+                        @guest
+                        <li>
                             <a href="/" class="nav-link">home</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="/events/create" class="nav-link">criar eventos</a>
+                        @endguest
+
+                        @auth
+                        <li >
+                            <a href="/dashboard" class="nav-link">Meus eventos</a>
                         </li>
-    
-                        <li class="nav-item">
+
+                        <li>
+                            <form action="/logout" method="post">
+                            @csrf
+                            <a href="/dashboard" class="nav-link" onclick="event.preventDefault();
+                            this.closest('form').submit();                            
+                            ">sair</a>
+                            </form>
+                        </li>
+
+                        @endauth
+
+                            @guest
+                        <li>
                             <a href="/trabalhos.blade.php" class="nav-link">trabalhos</a>
                         </li>
-    
 
-                        <li class="nav-item">
-                            <a href="/login.blade.php" class="nav-link">login</a>
+                            @endguest
+                        @guest
+                        <li>
+                            <a href="/login" class="nav-link">entrar</a>
                         </li>
-
-
-                        <li class="nav-item">
+                        @endguest
+                        @guest
+                        <li >
                             <a href="/sobre.blade.php" class="nav-link">sobre</a>
                         </li>
+                        @endguest
                     </ul>
-                
-                </div>
             </nav>
         </header>
 
+        
+
        
 
-        @yield('content')
+        
+        <main>
 
-            <footer>
-                <p>KiteStudio &copy; 2024</p>
-            </footer>
+            <div class="container-fluid">
+                <div class="row">
+                    {{--Flash Messages--}}
+                    @if (session('msg'))
+                    <p class="msg">{{session('msg')}}</p>
+                    @endif
+                @yield('content')
+                </div>
 
+
+            </div>
+        </main>
+        
+        <footer>
+            <p>KiteStudio &copy; 2024</p>
+        </footer>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
             <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
             <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     </body>
 </html>
