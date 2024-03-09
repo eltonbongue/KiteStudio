@@ -4,10 +4,13 @@
 
     @section('content')
 
-    <div id="event-create-container" class="col-md-6 offset-md-3">
-      
-      
-        <h1>Crie um Evento</h1>
+
+
+    <div id="ttt">
+
+    </div>
+      <div id="event-create-container" class="col-md-6 offset-md-3">
+        <h1 class="test">Crie um Evento</h1>
         <form action="/evento" method="post" enctype="multipart/form-data">
       @csrf
   
@@ -17,23 +20,22 @@
       </div>
   
           <div class="form-group">
-            <label for="title">Evento:</label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Nome">
+            <label for="titulo">Evento:</label>
+            <input type="text" class="form-control" id="title" name="titulo" placeholder="Nome">
           </div>
   
           <div class="form-group">
-            <label for="date">Data do Evento:</label>
-            <input type="date" class="form-control" id="date" name="date">
+            <label for="cidade">Cidade:</label>
+            <input type="text" class="form-control" id="cidade" name="cidade">
           </div>
   
           <div class="form-group">
-            <label for="title">Descricão</label>
-           <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?"></textarea>
+            <label for="descricao">Descricão</label>
+           <textarea name="descricao" id="descricao" class="form-control" placeholder="O que vai acontecer no evento?"></textarea>
           </div>
   
         <input type="submit" class="btn btn-primary" value="Criar evento" id="botao">
         </form>
       </div>
-
 
     @endsection

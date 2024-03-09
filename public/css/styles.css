@@ -69,6 +69,33 @@ color: aquamarine;
 }
 
 /*sobre*/
+
+#titulo_principal{
+    text-align: center;
+}
+
+#titulo_map{
+margin-bottom: 20px;
+text-align: center;
+
+}
+
+#mapa{
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#sobr{
+
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+#sobre{
+ margin-bottom: 40px;
+}
+
 #pprincipal{
     text-align:justify;
     margin: 50px;
@@ -107,6 +134,11 @@ color: aquamarine;
       padding: 50px;
     }
 
+
+    .sub{
+
+        margin-top: 20px;
+    }
 
 
 /*fim trabalho*/

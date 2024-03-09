@@ -18,8 +18,7 @@ use App\Http\Controllers\ProdutoController;
 
 Route::get('/', [EventController::class, 'index']);
 Route::get('/admin/evento', [EventController::class, 'create']);
-Route::post('/admin',[EventController::class,'store']);
-Route::get('/evento/{id}',  [EventController::class,'show']);
+Route::post('/evento',[EventController::class,'store']);
 
 Route::get('trabalhos.blade.php', [EventController::class, 'work']);
 
