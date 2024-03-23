@@ -55,6 +55,11 @@ header {
 color: aquamarine;
 }
 
+.nav-link-principal{
+    color: orangered;
+
+}
+
 @media( max-width:800px){
 
     li,a{

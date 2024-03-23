@@ -22,45 +22,23 @@
             <nav>
                  
                     <ul class="nav-links">
-                        @guest
-                        <li>
-                            <a href="/" class="nav-link">home</a>
-                        </li>
-
-                        @endguest
-
-                        @auth
-                        <li >
-                            <a href="/dashboard" class="nav-link">Meus eventos</a>
-                        </li>
-
-                        <li>
-                            <form action="/logout" method="post">
-                            @csrf
-                            <a href="/dashboard" class="nav-link" onclick="event.preventDefault();
-                            this.closest('form').submit();                            
-                            ">sair</a>
-                            </form>
-                        </li>
-
-                        @endauth
-
-                            @guest
+                
+                       <li>
+                        <a href="/" class="nav-link">home</a>
+                    </li>
+                      
                         <li>
                             <a href="/trabalhos.blade.php" class="nav-link">trabalhos</a>
                         </li>
-
-                            @endguest
-                        @guest
+       
                         <li>
-                            <a href="/login" class="nav-link">entrar</a>
+                            <a href="/login" class="nav-link-principal">entrar</a>
                         </li>
-                        @endguest
-                        @guest
-                        <li >
+    
+                       <li >
                             <a href="/sobre.blade.php" class="nav-link">sobre</a>
-                        </li>
-                        @endguest
+                        </li>    
+                        
                     </ul>
             </nav>
         </header>

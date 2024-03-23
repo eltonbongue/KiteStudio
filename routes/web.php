@@ -34,20 +34,41 @@ Route::get('auth/register.blade.php', function () {
 Route::get('admin/users.blade.php', function () {
 
     $U="active";
-    $E="#"; 
+    $E="#";
+    $G="#"; 
 
-    return view('admin/users' , ['U' => $U],['E' => $E]);
+return view('admin/users', ['U'=> $U, 'E'=>$E, 'G'=> $G]);
 });
 
 Route::get('admin/evento.blade.php', function () {
+         
+    $E="active";   
+       $U="#";
+         $G="#";
 
-         $E="active";   
-         $U="#";
-    return view('admin/evento', ['E' => $E],['U' => $U]);
+         
+return view('admin/evento', ['E'=>$E ,'U'=>$U, 'G'=>$G]);
+})->middleware('auth');;
+
+
+Route::get('admin/galeria.blade.php', function () {
+   
+    $G="active"; 
+    $U="#";
+    $E="#";
+   
+    
+     return view('admin/galeria', ["G"=>$G , "U"=>$U, "E"=>$E]);
 });
+
+
 
 Route::get('/sobre.blade.php', function () {
     return view('sobre');
+});
+
+Route::get('/meus_eventos.blade.php', function () {
+    return view('meus_eventos');
 });
 
 Route::get('/contactos.blade.php', function () {

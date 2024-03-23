@@ -12,7 +12,8 @@
       <div id="event-create-container" class="col-md-6 offset-md-3">
         <h1 class="test">Crie um Evento</h1>
         <form action="/evento" method="post" enctype="multipart/form-data">
-      @csrf
+
+            @csrf
   
       <div class="form-group">
         <label for="image">Imagem do Evento:</label>
