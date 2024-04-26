@@ -3,15 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Evento;
+use App\Models\Novidade;
 
-
-class EventController extends Controller
+class novidadeController extends Controller
 {
     public function index(){
 
-        $eventos = Evento::all();
-        return view('welcome', ['eventos' => $eventos]);
+        $novidades = Novidade::all();
+        return view('welcome', ['novidades' => $novidades]);
 
     }
 
@@ -23,11 +22,8 @@ class EventController extends Controller
 
 
     public function store(Request $request){
-        $eventos = new Evento;
-        //$evento -> data = $request -> data;
-        $eventos -> titulo = $request->titulo;
-        $eventos -> cidade = $request->cidade;
-        $eventos->descricao = $request->descricao;
+        $novidades = new Novidade;
+        $novidades->descricao = $request->descricao;
 
         //image upload
         if($request-> hasFile('image')  &&  $request->file('image')->isValid()) {
@@ -36,14 +32,13 @@ class EventController extends Controller
             $extension = $requestImage->extension();
             $imageName = md5($requestImage->getClientOriginalName() . strtotime("now"));
             $requestImage-> move(public_path('img/eventos'), $imageName);
-            $eventos->image = $imageName;
+            $novidades->image = $imageName;
 
         }
 
-        $eventos->save();
+        $novidades->save();
 
 
        // return redirect('/')->with('msg', 'Evento criado com sucesso!');
     }
-
 }

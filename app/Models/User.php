@@ -3,7 +3,6 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Evento;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -19,12 +18,18 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+
+    
+    protected $table = 'users';
+ 
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
+        'id',
         'name',
         'email',
         'password',
@@ -49,6 +54,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        
     ];
 
     /**
@@ -60,11 +66,20 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+   
 
-    
+
+/*     
     public function eventos(){
 
         return $this->hasMany('App\Models\Evento'); 
+
+    }
+    */
+    
+    public function galeria(){
+
+        return $this->hasMany('App\Models\Galeria'); 
 
     }
 

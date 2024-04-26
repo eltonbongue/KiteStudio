@@ -18,7 +18,7 @@
     <body>
 
         <header>
-            <span class="logotipo"><a href="" id="logo">KiteStudio</a></span>
+            <span class="logotipo"><a href="" id="logo"> <strong>KiteStudio</strong></a></span>
             <nav>
                  
                     <ul class="nav-links">
@@ -31,13 +31,15 @@
                             <a href="/trabalhos.blade.php" class="nav-link">trabalhos</a>
                         </li>
        
-                        <li>
-                            <a href="/login" class="nav-link-principal">entrar</a>
-                        </li>
-    
-                       <li >
+                        <li >
                             <a href="/sobre.blade.php" class="nav-link">sobre</a>
                         </li>    
+
+                        <li>
+                              <a href="/login" class="nav-link-principal"><button type="button" class="btn btn-primary" id="entrar_login"><strong>Entrar</strong> </button></a>
+                        </li>
+    
+                       
                         
                     </ul>
             </nav>

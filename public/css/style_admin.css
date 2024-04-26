@@ -8,3 +8,17 @@
     background-color: white;
     padding: 50px;
 }
+
+
+.dashboard-title-container{
+margin-bottom: 30px;
+margin-top: 30px;
+
+}
+
+
+.dashboard-eventos-container th{
+width: 25%;
+
+}
+

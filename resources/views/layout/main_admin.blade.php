@@ -50,7 +50,7 @@
           KT
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-         KiteStudio
+     <strong>Admin</strong>   
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -79,16 +79,30 @@
           </li>
 
           <li class="{{$E}}">
-            <a href="evento.blade.php">
+            <a href="novidades.blade.php">
+              <i class="now-ui-icons design_app"></i>
+              <p>Criar Novidades</p>
+            </a>
+          </li>
+
+          <li class="{{$LE}}">
+            <a href="lista_novidades.blade.php">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Lista de Eventos</p>
+              <p>Lista de Novidades</p>
             </a>
           </li>
 
           <li class="{{$G}}">
             <a href="galeria.blade.php">
-              <i class="now-ui-icons design_bullet-list-67"></i>
+              <i class="now-ui-icons design_app"></i>
               <p>Galeria</p>
+            </a>
+          </li>
+
+          <li class="{{$LG}}">
+            <a href="lista_galeria.blade.php">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Lista da galeria</p>
             </a>
           </li>
             

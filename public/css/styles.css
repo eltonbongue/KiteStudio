@@ -18,18 +18,32 @@ body{
 header {
 
     display: flex;
-  /*justify-content: space-between;*/ 
+  /*justify-content: space-between;   #353E48*/ 
    justify-content: flex-end;
     align-items: center;
     padding: 15px 15px;
-    background-color: #353E48;
+    background-color:#095169;         
     margin-bottom: 108px;
+}
+
+li:hover{
+
+        font-size: 17px;
+}
+
+img{
+    border-radius: 40px;
+}
+
+#img_principal{
+
+   border-radius: 0%;
 }
 
 
 #logo{
     text-decoration: none;
-    color:#1CB0ED;
+    color:rgb(255, 153, 0);
     padding: 10px;
     border: 5px solid  #fff;
     border-radius: 90px;
@@ -56,8 +70,13 @@ color: aquamarine;
 }
 
 .nav-link-principal{
-    color: orangered;
+    
 
+}
+
+#entrar_login{
+
+    height: 36px;
 }
 
 @media( max-width:800px){
@@ -254,7 +273,7 @@ color: #04030F;
 
 footer{
 text-align: center;
-background-color: #353E48;
+background-color: #095169;
 color: #fff;
 padding: 30px;
 position: absolute;

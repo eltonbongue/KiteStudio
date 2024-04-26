@@ -1,44 +1,35 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Galeria') }}
-        </h2>
-    </x-slot>
+@extends('layout.main_login')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
+    @section('title', 'sessao')
+
+    @section('content')
+
+     
+    <div class="col-md-12" id="events-container">
+    @foreach ($galeria as $galeria )
+
+                      @foreach ($sessao as $sessions )
+               
+                              
+                            
+  <div class="row" id="cards-container">
+                
+    @if ( $galeria->user_id === $sessions->user_id)
+       
+            <div >
+                
+             <img src="/img/galeria/{{ $galeria->image}}" alt="" width="300px">
+    
             </div>
-        </div>
+            <div>  
+                <a href="/img/galeria/{{ $galeria->image}}" download="fotoKitestudio.jpg" class="btn btn-primary" id="botao">baixar</a>  
+               </div> 
+            @endif
+      
+  </div>
+
+        @endforeach     
+        @endforeach     
     </div>
 
-
-
-
-    <div class="col-md-12" id="events-container">
-        <h2>Novidades</h2>
-        <p class="subtitle">Veja as próximas fotos</p>
-    
-        <div class="row" id="cards-container">
-         
-          <div class="card col-md-3">
-            <img src="/img/eventos/flyers.jpg" width="150px">
-    
-            <div class="card-body">
-              <p class="card-date">12/5/2024</p>
-            
-             
-             {{--<a href="/img/foto2.jpg" download="fotoKitestudio.jpg" class="btn btn-primary" id="botao">baixar</a> <center></center>--}} 
-           
-            </div>
-          </div>  
-   
-        
-    
-    
-        </div>
-    
-      </div>
-</x-app-layout>
-
+@endsection
