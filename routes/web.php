@@ -16,10 +16,19 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\novidadeController;
 use App\Http\Controllers\galeriaController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\SessaoController;
 use App\Http\Controllers\ListNovidadesController;
 use App\Http\Controllers\ListUsersController;
 use App\Http\Controllers\ListGaleriaController;
+
+
+
+
+Route::group(['middleware' => 'verifySession'], function () {
+    // suas rotas protegidas aqui
+});
+
 
 
 Route::get('/', [novidadeController::class, 'index']);
@@ -28,6 +37,8 @@ Route::get('/admin/galeria', [galeriaController::class, 'create']);
 Route::post('/novidades',[novidadeController::class,'store']);
 Route::get('/dashboard{id}',[galeriaController::class,'show']);
 Route::post('/dashboard',[galeriaController::class,'store']);
+Route::delete('/lista_galeria/{id}',[ListGaleriaController::class,'destroy'])->name('lista_galeria.destroy');
+Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 
 
 Route::get('admin/dashboard_admin.blade.php', function () {
@@ -77,7 +88,7 @@ return view('admin/lista_novidades', ["U"=>$U,'LE'=>$LE, 'E'=>$E , "G"=>$G, 'LG'
 });
 
 
-Route::get('admin/galeria.blade.php', function () {
+Route::get('admin/galeria.blade.php', [UserController::class, 'index'], function () {
    
     $G="active"; 
     $U="#";
@@ -85,7 +96,9 @@ Route::get('admin/galeria.blade.php', function () {
     $LE="#";
     $LG="#";
     
+    
      return view('admin/galeria', ["G"=>$G , "U"=>$U, "E"=>$E , "LE"=>$LE, "LG"=>$LG]);
+     
 })->middleware('auth');
 
 Route::get('admin/lista_galeria.blade.php', [ListGaleriaController::class,'show'] , function () {
@@ -128,7 +141,7 @@ Route::post('/dashboard',[galeriaController::class,'store']);
 
     Route::get('/dashboard',[galeriaController::class, 'index'], function () {
         return view('dashboard');
-    })->name('dashboard');
+    })->name('dashboard')->middleware('auth');
 
 
 

@@ -7,7 +7,7 @@
 
 
   <div class="col-md-10 offset dashboard-title-container">
-    <h1>Novidades</h1>
+    <h3>Novidades</h3>
   </div>
     
         <div class="col-md-10 offset dashboard-eventos-container">

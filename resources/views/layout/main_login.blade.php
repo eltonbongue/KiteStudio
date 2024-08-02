@@ -32,19 +32,16 @@
                       <li class="nav-item">
                         <a class="nav-link" href="#">Videos</a>
                       </li>
-                      @foreach ($user as $user )
+                     
+                
 
-                      @foreach ($sessao as $sessions )
-                          
-                              
-                            @if ( $user->id === $sessions->user_id)
-
+                      
                             <li class="nav-item dropdown">
-                               
+                            
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                   {{$user->name}}
                                 </a>
-                               
+                                
                                
                                 <ul class="dropdown-menu">
                                     <form action="/logout" method="post">
@@ -54,18 +51,20 @@
                                     </form>
                                     
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">perfil</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('profile.show') }}">perfil</a></li>
                                   </ul>
+                                  
                                 </li>
+                               
+                                 
+                  
+                     
                               </ul>
                             </li> 
                              
-                            @endif
-                        @endforeach
-                        @endforeach
-                       
-
-
+                           
+                     
+                        
                        
                  
                 </div>

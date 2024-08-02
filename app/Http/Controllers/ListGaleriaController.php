@@ -29,4 +29,13 @@ class ListGaleriaController extends Controller
         return view('admin.lista_galeria', ['galeria' => $galeria, 'sessao' => $sessao, 'user' => $user ,  'LG' => $LG, 'LE' => $LE, 'U' => $U, 'E' => $E, 'G' => $G]); 
 
 }
+
+
+
+    public function destroy($id){
+
+           $galeria = Galeria::findOrFail($id)->delete();
+            return redirect('/lista_galeria')->with('msg','excluido com sucesso!');
+    }
+    
 }
