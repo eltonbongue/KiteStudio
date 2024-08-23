@@ -41,9 +41,22 @@ Route::delete('/lista_galeria/{id}',[ListGaleriaController::class,'destroy'])->n
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 
 
-Route::get('admin/dashboard_admin.blade.php', function () {
-    return view('admin/dashboard_admin');
+
+Route::get('admin/dashboard_admin.blade.php',[UserController::class, 'show'],  function () {
+
+    $U="active";
+    $E="#";
+    $DA="#";
+    $G="#";
+    $LE="#";
+    $LG="#"; 
+    
+    return view('admin/dashboard_admin', ['userCount'=>$userCount,'novidadeCount'=>$novidadeCount,'DA'=>$DA, 'U'=> $U, 'E'=>$E, 'G'=> $G, "LE"=>$LE, "LG"=>$LG]);
 });
+
+
+
+
 
 Route::get('auth/register.blade.php', function () {
 
@@ -54,37 +67,40 @@ Route::get('admin/users.blade.php', [ListUsersController::class,'show'], functio
 
     $U="active";
     $E="#";
+    $DA="#";
     $G="#";
     $LE="#";
     $LG="#"; 
 
-return view('admin/users', ['U'=> $U, 'E'=>$E, 'G'=> $G, "LE"=>$LE, "LG"=>$LG]);
+return view('admin/users', ['U'=> $U, 'DA'=>$DA,'E'=>$E, 'G'=> $G, "LE"=>$LE, "LG"=>$LG]);
 });
 
 Route::get('admin/novidades.blade.php', function () {
          
     $E="active";   
        $U="#";
+       $DA="#";
          $G="#";
          $LE="#";
         $LG="#";
     
 
          
-return view('admin/novidades', ['E'=>$E ,'U'=>$U, 'G'=>$G, "LE"=>$LE, "LG"=>$LG]);
+return view('admin/novidades', ['E'=>$E ,'U'=>$U,'DA'=>$DA, 'G'=>$G, "LE"=>$LE, "LG"=>$LG]);
 });
 
 
 Route::get('admin/lista_novidades.blade.php', [ListNovidadesController::class,'show'], function () {
          
      $U="#";
+     $DA="#";
      $LE="active";
      $E="#";   
      $G="#";     
      $LG="#";
     
 
-return view('admin/lista_novidades', ["U"=>$U,'LE'=>$LE, 'E'=>$E , "G"=>$G, 'LG'=>$LG] );
+return view('admin/lista_novidades', ["U"=>$U,'LE'=>$LE, 'DA'=>$DA,'E'=>$E , "G"=>$G, 'LG'=>$LG] );
 });
 
 
@@ -92,12 +108,13 @@ Route::get('admin/galeria.blade.php', [UserController::class, 'index'], function
    
     $G="active"; 
     $U="#";
+    $DA="#";
     $E="#";
     $LE="#";
     $LG="#";
     
     
-     return view('admin/galeria', ["G"=>$G , "U"=>$U, "E"=>$E , "LE"=>$LE, "LG"=>$LG]);
+     return view('admin/galeria', ["G"=>$G , "U"=>$U,"DA"=>$DA, "E"=>$E , "LE"=>$LE, "LG"=>$LG]);
      
 })->middleware('auth');
 
@@ -105,11 +122,12 @@ Route::get('admin/lista_galeria.blade.php', [ListGaleriaController::class,'show'
    
     $LG="active";
     $G="#"; 
+    $DA="#"; 
     $U="#";
     $E="#";
     $LE="#";
     
-     return view('admin/lista_galeria', ['LG'=>$LG, "G"=>$G , "U"=>$U, "E"=>$E , "LE"=>$LE ]);
+     return view('admin/lista_galeria', ['LG'=>$LG, "G"=>$G , "DA"=>$DA,"U"=>$U, "E"=>$E , "LE"=>$LE ]);
 });
 
 

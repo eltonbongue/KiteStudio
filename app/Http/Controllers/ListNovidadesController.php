@@ -13,12 +13,13 @@ class ListNovidadesController extends Controller
       
         $novidades = Novidade::all();
         $U="#";
+        $DA="#";
         $LE="active";
         $E="#";   
         $G="#";     
         $LG="#";
        
-        return view('admin.lista_novidades', ['novidades' => $novidades, 'LE' => $LE, 'U' => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
+        return view('admin.lista_novidades', ['novidades' => $novidades, 'LE' => $LE, 'DA' => $DA,'U' => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
 
               
 }

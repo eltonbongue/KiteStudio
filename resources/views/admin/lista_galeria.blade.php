@@ -9,26 +9,26 @@
         <h3>Galeria lista</h3>
       </div>
         
-            <div class="col-md-10 offset dashboard-eventos-container">
+            <div>
                 @if(count($galeria) > 0)
     
                     <table class="table">
                         <thead>
-                                <tr>
+                                <tr class="p-4 bg-slate-300">
                                     <th scope="col">#</th>
                                     <th scope="col">imagem</th>
-                                <th scope="col">Acções</th>
+                                    <th scope="col">Acções</th>
                                 </tr>
     
                         </thead>
                                 
-                        <tbody class="test">
+                        <tbody class="p-4 bg-white">
                                 @foreach ($galeria as $galeria)
                                         <tr>
                                             <td scropt="row">{{ $loop->index + 1 }}</td>
                                             <td><a href="img/eventos/{{$galeria->id}}">{{$galeria->image}}</a></td>
 
-                                            <td><a href="" class="btn btn-info edit-btn"><ion-icon name="create-outline"> </ion>editar</a>
+                                            <td class="flex"><a href="" class="btn btn-info edit-btn mr-4"><ion-icon name="create-outline"> </ion>editar</a>
                                             <form action="{{ route('lista_galeria.destroy', $galeria->id) }}" method="POST">
                                                  @csrf
                                                  @method('DELETE')

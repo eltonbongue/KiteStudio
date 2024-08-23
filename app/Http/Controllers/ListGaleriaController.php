@@ -16,6 +16,7 @@ class ListGaleriaController extends Controller
         $user = User::all();
 
         $U="#";
+        $DA="#";
         $LE="#";
         $E="#";   
         $G="#";     
@@ -26,7 +27,7 @@ class ListGaleriaController extends Controller
     
 
         
-        return view('admin.lista_galeria', ['galeria' => $galeria, 'sessao' => $sessao, 'user' => $user ,  'LG' => $LG, 'LE' => $LE, 'U' => $U, 'E' => $E, 'G' => $G]); 
+        return view('admin.lista_galeria', ['galeria' => $galeria, 'sessao' => $sessao, 'user' => $user ,  'LG' => $LG, 'LE' => $LE, 'DA' => $DA,'U' => $U, 'E' => $E, 'G' => $G]); 
 
 }
 

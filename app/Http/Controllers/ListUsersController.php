@@ -12,11 +12,12 @@ class ListUsersController extends Controller
         $users = User::all();
         $U="active";
         $LE="#";
+        $DA="#";
         $E="#";   
         $G="#";     
         $LG="#";
        
-        return view('admin.users', ['users' => $users, 'LE' => $LE, 'U' => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
+        return view('admin.users', ['users' => $users, 'LE' => $LE, 'DA' => $DA,'U' => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
 
               
 }

@@ -10,6 +10,7 @@ class novidadeController extends Controller
     public function index(){
 
         $novidades = Novidade::all();
+        
         return view('welcome', ['novidades' => $novidades]);
 
     }
@@ -41,4 +42,20 @@ class novidadeController extends Controller
 
        // return redirect('/')->with('msg', 'Evento criado com sucesso!');
     }
+
+    public function show(){
+
+        // Contar o número de usuários
+        $novidadeCount = Novidade::count();
+        $DA="active";
+        $G="#";
+       $LE="#";
+       $E="#";   
+       $U="#";     
+       $LG="#";
+
+        // Passar o número de usuários para a view
+        return view('admin.dashboard_admin', ['userCount'=>$userCount,'novidadeCount'=>$novidadeCount,'DA'=>$DA,'LE' => $LE, "U" => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
+
+   }
 }
