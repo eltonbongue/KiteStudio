@@ -38,6 +38,7 @@ Route::post('/novidades',[novidadeController::class,'store']);
 Route::get('/dashboard{id}',[galeriaController::class,'show']);
 Route::post('/dashboard',[galeriaController::class,'store']);
 Route::delete('/lista_galeria/{id}',[ListGaleriaController::class,'destroy'])->name('lista_galeria.destroy');
+Route::delete('/lista_novidades/{id}',[ListNovidadesController::class,'destroy'])->name('lista_novidades.destroy');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 
 

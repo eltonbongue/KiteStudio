@@ -25,4 +25,11 @@ class ListNovidadesController extends Controller
 }
 
 
+public function destroy($id){
+
+    $novidades = Novidade::findOrFail($id)->delete();
+     return redirect('/lista_novidades')->with('msg','excluido com sucesso!');
+}
+
+
 }
