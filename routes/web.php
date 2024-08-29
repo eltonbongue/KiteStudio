@@ -34,7 +34,7 @@ Route::group(['middleware' => 'verifySession'], function () {
 Route::get('/', [novidadeController::class, 'index']);
 Route::get('/admin/novidades', [novidadeController::class, 'create']);
 Route::get('/admin/galeria', [galeriaController::class, 'create']);
-Route::post('/novidades',[novidadeController::class,'store']);
+Route::post('/novidades',[novidadeController::class,'store'])->name('lista_novidade.store');
 Route::get('/dashboard{id}',[galeriaController::class,'show']);
 Route::post('/dashboard',[galeriaController::class,'store']);
 Route::delete('/lista_galeria/{id}',[ListGaleriaController::class,'destroy'])->name('lista_galeria.destroy');
@@ -136,7 +136,6 @@ Route::get('admin/lista_galeria.blade.php', [ListGaleriaController::class,'show'
 Route::get('/sobre.blade.php', function () {
     return view('sobre');
 });
-
 
 Route::get('/trabalhos.blade.php', function () {
     return view('trabalhos');

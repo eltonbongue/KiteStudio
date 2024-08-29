@@ -11,9 +11,10 @@
     </div>
       <div id="event-create-container" class="col-md-6 offset-md-3">
         <h1 class="test">Crie uma Novidade</h1>
-        <form action="/novidades" method="post" enctype="multipart/form-data">
+        <form action="{{route('lista_novidade.store')}}" method="post" enctype="multipart/form-data">
 
             @csrf
+            @method('post')
   
       <div class="form-group">
         <label for="image">Imagem da Novidade:</label>

@@ -118,7 +118,7 @@
       
         <div class="p-8 bg-blue-500 mb-32 ">
         <ul class="flex justify-center items-center space-x-8">
-          <li>Home</li>
+          <li><a href="/">Home</a></li>
           <li>Galeria</li>
           <li>sair</li>
         </ul>

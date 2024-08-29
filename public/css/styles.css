@@ -12,23 +12,15 @@ body{
     padding-bottom: 100px;
     position: relative;
     box-sizing: border-box;
+    
 }
 
 
-header {
-
-    display: flex;
-  /*justify-content: space-between;   #353E48*/ 
-   justify-content: flex-end;
-    align-items: center;
-    padding: 15px 15px;
-    background-color:#095169;         
-    margin-bottom: 108px;
-}
 
 li:hover{
 
         font-size: 17px;
+        color:#FF9100;
 }
 
 img{
@@ -43,7 +35,7 @@ img{
 
 #logo{
     text-decoration: none;
-    color:rgb(255, 153, 0);
+    color:#020617;
     padding: 10px;
     border: 5px solid  #fff;
     border-radius: 90px;

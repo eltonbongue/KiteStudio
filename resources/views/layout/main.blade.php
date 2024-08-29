@@ -14,39 +14,28 @@
           <link rel="stylesheet" href="/css/styles.css">
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="/js/script.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
 
-        <header>
-            <span class="logotipo"><a href="" id="logo"> <strong>KiteStudio</strong></a></span>
-            <nav>
-                 
-                    <ul class="nav-links">
-                
-                       <li>
-                        <a href="/" class="nav-link">home</a>
-                    </li>
-                      
-                        <li>
-                            <a href="/trabalhos.blade.php" class="nav-link">trabalhos</a>
-                        </li>
-       
-                        <li >
-                            <a href="/sobre.blade.php" class="nav-link">sobre</a>
-                        </li>    
+        
+        <header class="p-2 h-24 bg-gradient-to-r from-cyan-500 to-blue-500">
+                        <nav>
+                                <ul class="flex justify-end items-center h-16 space-x-10"> 
+                                    <span class="logotipo"><a href="" id="logo"> <strong>KiteStudio</strong></a></span>
+                                    <li><a href="/" class="nav-link">home</a></li>
+                                    <li><a href="/trabalhos.blade.php" class="nav-link">trabalhos</a></li>
+                                    <li><a href="/sobre.blade.php" class="nav-link">sobre</a></li>
+                                    <li><a href="/login" class="nav-link-principal"><button type="button" class="btn btn-primary" id="entrar_login"><strong>Entrar</strong> </button></a></li>
+                                </ul>
 
-                        <li>
-                              <a href="/login" class="nav-link-principal"><button type="button" class="btn btn-primary" id="entrar_login"><strong>Entrar</strong> </button></a>
-                        </li>
-    
-                       
-                        
-                    </ul>
-            </nav>
-        </header>
+                        </nav>
+                    </header>
+        
 
         
 
+        
        
 
         
@@ -65,7 +54,7 @@
             </div>
         </main>
         
-        <footer>
+        <footer class="p-2 h-24 bg-gradient-to-r from-cyan-500 to-blue-500">
             <p>KiteStudio &copy; 2024</p>
         </footer>
 

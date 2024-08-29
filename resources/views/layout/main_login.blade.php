@@ -14,11 +14,12 @@
           <link rel="stylesheet" href="/css/style_login.css">
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="/js/script.js"></script>
+
     </head>
     <body>
-
-        <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+     
+        <header style="background-color:#0284c7">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#"><span class="logotipo"><a href="" id="logo"> <strong>KiteStudio</strong></a></span></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +28,7 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Fotos</a>
+                        <a class="nav-link" aria-current="page" href="#">Fotos</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Videos</a>
@@ -39,11 +40,11 @@
                             <li class="nav-item dropdown">
                             
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  {{$user->name}}
+                                <strong>{{$user->name}}</strong>  
                                 </a>
                                 
                                
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu" style="background-color: black">
                                     <form action="/logout" method="post">
                                         @csrf
                                         <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();

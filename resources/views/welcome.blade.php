@@ -5,25 +5,26 @@
 
     @section('content')
 
-        
+   
 
-        <div class="container">
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+     <div id="carouselExampleSlidesOnly" class="carousel slide mt-10" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="/img/foto1.jpg" class="d-block w-100" height="600px" alt="...">
+                    <img src="/img/foto1.jpg" class="d-block w-100 h-96"  alt="...">
                   </div>
                   <div class="carousel-item ">
-                    <img src="/img/foto2.jpg" class="d-block w-100" height="600px" alt="...">
+                    <img src="/img/foto2.jpg" class="d-block w-100 h-96" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="/img/foto3.jpg" class="d-block w-100" height="600px" alt="...">
+                    <img src="/img/foto3.jpg" class="d-block w-100 h-96" alt="...">
                   </div>
                 </div>
               </div>
-        </div>
 
+        
 
+            
+    
 
         <div class="col-md-12" id="events-container">
           <h2>Novidades</h2>
