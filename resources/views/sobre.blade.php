@@ -4,21 +4,21 @@
 
     @section('content')
 
-<h1 id="titulo_principal">Sobre</h1>
+<h1 class="text-center mt-4">Sobre</h1>
 
 <div>
 
-    <h3 id="titulo_principal">Deixe o seu comentário sobre os nossos serviços</h3>
-    <div class="col-md-6 offset-md-3" id="sobr">
-      <label for="exampleFormControlInput1" class="form-label">Nome</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="introduz seu nome">
+    <h3 class="text-center mt-8 mb-10">Deixe o seu comentário sobre os nossos serviços</h3>
+    <div class="flex flex-row justify-center m-4">
+      <label for="exampleFormControlInput1" class="text-gray-500 m-2">Nome</label>
+      <input type="text" class=" border-blue-600 border-b-2 w-50 hover:border-gray-400 focus:outline-none focus:text-gray-900" placeholder="introduza seu nome">
     </div>
-    <div class="col-md-6 offset-md-3" id="sobre">
-      <label for="exampleFormControlInput1" class="form-label">email</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <div class="flex flex-row justify-center m-4">
+      <label for="email" class="text-gray-500 m-2">email</label>
+      <input type="email" class="flex border-blue-600  border-b-2 w-50 hover:border-gray-400 focus:outline-none"  placeholder="introduza seu email">
     </div>
-    <div class="col-md-6 offset-md-3" id="sobre">
-      <label for="exampleFormControlTextarea1" class="form-label">Deixe o seu comentário sobre os nossos serviços</label>
+    <div class="col-md-6 offset-md-3">
+      <label for="exampleFormControlTextarea1" class="text-gray-500 mt-4">Deixe o seu comentário sobre os nossos serviços</label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
 

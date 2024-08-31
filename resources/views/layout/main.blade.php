@@ -17,12 +17,12 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
-
         
         <header class="p-2 h-24 bg-gradient-to-r from-cyan-500 to-blue-500">
                         <nav>
                                 <ul class="flex justify-end items-center h-16 space-x-10"> 
-                                    <span class="logotipo"><a href="" id="logo"> <strong>KiteStudio</strong></a></span>
+                                    <span class="logotipo md:w-48 lg:w-32 xl:w-24 
+                                    transition-all duration-300 ease-in-out"><a href="" id="logo"> <strong>KiteStudio</strong></a></span>
                                     <li><a href="/" class="nav-link">home</a></li>
                                     <li><a href="/trabalhos.blade.php" class="nav-link">trabalhos</a></li>
                                     <li><a href="/sobre.blade.php" class="nav-link">sobre</a></li>
@@ -55,7 +55,7 @@
         </main>
         
         <footer class="p-2 h-24 bg-gradient-to-r from-cyan-500 to-blue-500">
-            <p>KiteStudio &copy; 2024</p>
+            <p class="text-center mt-4">KiteStudio &copy; 2024</p>
         </footer>
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
