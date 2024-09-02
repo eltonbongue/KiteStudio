@@ -12,4 +12,13 @@ class Novidade extends Model
 
     protected $table = 'novidade';
     protected $fillable= ['image','descricao'];
+
+
+    public function admin(){
+
+        return $this->belongsTo('App\Models\Admin'); 
+
+    }
+
+
 }

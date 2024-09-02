@@ -11,15 +11,17 @@
     <h3 class="text-center mt-8 mb-10">Deixe o seu comentário sobre os nossos serviços</h3>
     <div class="flex flex-row justify-center m-4">
       <label for="exampleFormControlInput1" class="text-gray-500 m-2">Nome</label>
-      <input type="text" class=" border-blue-600 border-b-2 w-50 hover:border-gray-400 focus:outline-none focus:text-gray-900" placeholder="introduza seu nome">
+      <input type="text" class=" border-blue-600 border-b-2 w-50 text-sm hover:border-gray-400 focus:outline-none focus:text-gray-900 placeholder-gray-300" placeholder="introduza seu nome">
     </div>
     <div class="flex flex-row justify-center m-4">
       <label for="email" class="text-gray-500 m-2">email</label>
-      <input type="email" class="flex border-blue-600  border-b-2 w-50 hover:border-gray-400 focus:outline-none"  placeholder="introduza seu email">
+      <input type="email" class="flex border-blue-600  border-b-2 w-50 text-sm hover:border-gray-400 focus:outline-none placeholder-gray-300"  placeholder="introduza seu email">
     </div>
     <div class="col-md-6 offset-md-3">
       <label for="exampleFormControlTextarea1" class="text-gray-500 mt-4">Deixe o seu comentário sobre os nossos serviços</label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+    <button type="submit" class="p-2 px-4 bg-slate-500 m-4 hover:bg-green-600 text-white rounded ">enviar</button>
     </div>
 
   </div>

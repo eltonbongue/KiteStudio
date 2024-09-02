@@ -28,7 +28,7 @@
                                             <td scropt="row">{{ $loop->index + 1 }}</td>
                                             <td><a href="img/eventos/{{$galeria->id}}">{{$galeria->image}}</a></td>
 
-                                            <td class="flex"><a href="" class="btn btn-info edit-btn mr-4"><ion-icon name="create-outline"> </ion>editar</a>
+                                            <td class="flex"><a href="" class="btn btn-info edit-btn mr-4 rounded-2xl"><ion-icon name="create-outline"> </ion>editar</a>
                                             <form action="{{ route('lista_galeria.destroy', $galeria->id) }}" method="POST">
                                                  @csrf
                                                  @method('DELETE')
