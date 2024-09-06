@@ -28,11 +28,11 @@
                                             <td scropt="row">{{ $loop->index + 1 }}</td>
                                             <td><a href="img/eventos/{{$galeria->id}}">{{$galeria->image}}</a></td>
 
-                                            <td class="flex"><a href="" class="btn btn-info edit-btn mr-4 rounded-2xl"><ion-icon name="create-outline"> </ion>editar</a>
+                                            <td class="flex"><a href=""><img src="/img/editar.png" class="w-4 mr-4" alt=""></a>
                                             <form action="{{ route('lista_galeria.destroy', $galeria->id) }}" method="POST">
                                                  @csrf
                                                  @method('DELETE')
-                                            <button type="submit" class="btn btn-danger delete-btn" style="margin-top:5px"><ion-icon name="trash-outline"></ion>apagar</button>
+                                            <button type="submit"><img src="/img/lixo.png" class="w-4" alt=""></button>
                                             </form>
                                             </td>
                                         </tr>

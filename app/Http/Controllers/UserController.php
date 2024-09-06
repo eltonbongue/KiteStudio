@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Novidade;
 use App\Models\Galeria;
+use App\Models\Admin;
 
 class UserController extends Controller
 {
@@ -54,6 +55,7 @@ class UserController extends Controller
          $userCount = User::count();
          $novidadeCount = Novidade::count();
          $galeriaCount = Galeria::count();
+         $adminCount = Admin::count();
          $DA="active";
          $G="#";
         $LE="#";
@@ -62,7 +64,7 @@ class UserController extends Controller
         $LG="#";
 
          // Passar o número de usuários para a view
-         return view('admin.dashboard_admin', ['userCount'=>$userCount,'novidadeCount'=>$novidadeCount,'galeriaCount'=>$galeriaCount,'DA'=>$DA,'LE' => $LE, "U" => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
+         return view('admin.dashboard_admin', ['userCount'=>$userCount,'novidadeCount'=>$novidadeCount,'galeriaCount'=>$galeriaCount,'adminCount'=>$adminCount,'DA'=>$DA,'LE' => $LE, "U" => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
 
     }
 

@@ -10,14 +10,14 @@
 
     </div>
       <div id="event-create-container" class="col-md-6 offset-md-3">
-        <h1 class="test">Crie uma Novidade</h1>
+        <h1 class="mb-4 text-blue-500 bold">Crie uma Novidade</h1>
         <form action="{{route('lista_novidade.store')}}" method="post" enctype="multipart/form-data">
 
             @csrf
             @method('post')
   
       <div class="form-group">
-        <label for="image">Imagem da Novidade:</label>
+        <label for="image"><img src="/img/img.png" class="w-16" alt=""></label>
         <input type="file" id="image" name="image" class="from-control-file">
       </div>
   

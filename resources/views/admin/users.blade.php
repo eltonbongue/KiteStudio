@@ -31,11 +31,11 @@
                                           <td>{{$users->name}}</td>
                                           <td>{{$users->email}}</td>
 
-                                          <td class="flex "><a href="" class="btn btn-info edit-btn mr-4 mt-2 rounded-2xl"><ion-icon name="create-outline"> </ion>editar</a>
+                                          <td class="flex "><a href=""><img src="/img/editar.png" class="w-4 mr-4" alt=""></a>
                                           <form action="{{ route('users.destroy', $users->id) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este usuário?');">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger delete-btn rounded-2xl mt-2"><ion-icon name="trash-outline"></ion>apagar</button>
+                                            <button type="submit"><img src="/img/lixo.png" class="w-4" alt=""></button>
                                         </form>
                                           
                                       </tr>
