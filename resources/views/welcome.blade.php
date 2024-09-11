@@ -21,7 +21,7 @@
           
 
           
-          <form action="" class="mt-7 space-x-4">
+          <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
               
             <button class="inline-flex items-center text-yellow-900 bg-orange-500 py-2 px-6 hover:bg-gray-800 rounded">
               serviços
@@ -31,7 +31,7 @@
               sobre
             </button>
             
-              <button class="inline-flex items-center text-yellow-900 bg-orange-500 py-2 px-6 hover:bg-gray-800  rounded"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-3 ">
+              <button class="col-span-2 lg:col-span-1 inline-flex items-center text-yellow-900 bg-orange-500 py-2 px-6 hover:bg-gray-800  rounded"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-3 ">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                 </svg>
                   novidades
@@ -39,7 +39,7 @@
 
 
 
-          </form>
+              </div>
       </div>
       </div>
   </div>
@@ -75,6 +75,47 @@
           </div>
 
         </div>
+
+        
+              <div class="space-y-16 bg-gray-300">
+                  <h3 class="text-2xl text-gray-500 font-semibold text-center mb-8 mt-8">Conheça os nossos serviços</h3>
+
+                  <div class="grid grid-cols-2 grid-rows-2 gap-8">
+                      <div class=" col-span-1 row-span-2 h-full"><img src="../img/foto3.jpg" class="w-full h-full object-cover" alt=""></div>
+                      <div class=" col-span-1 h-24 space-y-40">
+                        <div>
+                        <h3 class="text-gray-800 font-black mb-3 m-8">Fotos profissionais</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perspiciatis perferendis en
+                          im, eligendi vel vitae ea quos labore debitis rerum distinctio. Autem id 
+                        i animi unde, sed saepe enim deleniti iste.</p>
+
+                      </div>
+
+                        <div class="col-span-1 h-72 mt-10"><img src="../img/videos.jpg" class="w-full h-full object-cover" alt="">
+                          <h3 class="text-gray-800 font-black mt-4 m-8">Videos profissionais</h3>
+                          <p class="mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perspiciatis perferendis enim, eligendi vel vitae ea quos labore debitis rerum distinctio. Autem id 
+                            ipsa veniam voluptatem. Nece
+                            ssitatibus doloremque odit culpa. Lorem ipsum dolor 
+                            sit amet consectetur adipisicing elit. Ut voluptate maxime delen
+                            iti rem veritatis dicta temporibus dolorum! Voluptas, consequuntur pariatur atque et mod
+                            i animi unde, sed saepe enim deleniti iste.</p></div>
+                      </div>
+                  </div>
+                  
+
+                  <div class="grid grid-cols-4 grid-rows-2 gap-4">
+                    <div class=" col-span-2 row-span-2 h-96"><img src="../img/quadro4.jpg" class="w-full h-full object-cover" alt=""></div>
+                    <div class=" col-span-2 h-36"><h3 class="text-gray-800 font-black mb-3 m-8"> Quadros profissionais</h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptate maxime deleniti rem veritatis dicta temporibus dolorum! Voluptas, consequuntur pariatur atque et modi animi unde, sed saepe enim deleniti iste.</p></div>
+                    <div class="h-72 mb-4"><img src="../img/flyers.jpg" class="w-full h-full object-cover" alt=""></div>
+                    <div class="h-32">
+                      <h3 class="text-gray-800 font-black mb-3 m-8">Flyers profissionais</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, non repudiandae! Dolor, totam laborum! Dolorum, natus. Quos adipisci optio, saepe repellendus voluptatem, quaerat est voluptate repellat cumque sint harum laborum.</p></div>
+
+                </div>
+                
+              </div>
+
 
     @endsection
 
