@@ -24,7 +24,6 @@
                                     <span class="logotipo md:w-48 lg:w-32 xl:w-24 
                                     transition-all duration-300 ease-in-out"><a href="" id="logo"> <strong>KiteStudio</strong></a></span>
                                     <li><a href="/" class="nav-link">home</a></li>
-                                    <li><a href="/trabalhos.blade.php" class="nav-link">trabalhos</a></li>
                                     <li><a href="/sobre.blade.php" class="nav-link">sobre</a></li>
                                     <li><a href="/login" class="nav-link-principal"><button type="button" class="btn btn-primary" id="entrar_login"><strong>Entrar</strong> </button></a></li>
                                 </ul>
@@ -54,7 +53,19 @@
             </div>
         </main>
         
-        <footer class="p-2 h-24 bg-gradient-to-r from-cyan-500 to-blue-500">
+        <footer class="p-32 h-24 bg-gradient-to-r from-cyan-500 to-blue-500">
+
+            <div class="container lg:flex lg:items-center lg:justify-center">
+
+
+                <ul class="flex space-x-8">
+                    <li><a href="" class="text-sm text-gray-500 hover:text-gray-800 hover:underline">Sobre</a></li>
+                    <li><a href="" class="text-sm text-gray-500 hover:text-gray-800 hover:underline">Informações</a></li>
+                    <li><a href="" class="text-sm text-gray-500 hover:text-gray-800 hover:underline">Contactos</a></li>
+                </ul>
+
+
+            </div>
             <p class="text-center mt-4">KiteStudio &copy; 2024</p>
         </footer>
 
