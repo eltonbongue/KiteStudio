@@ -55,13 +55,13 @@
         
         <footer class="p-32 h-24 bg-gradient-to-r from-cyan-500 to-blue-500">
 
-            <div class="container lg:flex lg:items-center lg:justify-center">
+            <div class="container lg:flex lg:items-center lg:justify-center flex items-center justify-center">
 
 
                 <ul class="flex space-x-8">
-                    <li><a href="" class="text-sm text-gray-500 hover:text-gray-800 hover:underline">Sobre</a></li>
-                    <li><a href="" class="text-sm text-gray-500 hover:text-gray-800 hover:underline">Informações</a></li>
-                    <li><a href="" class="text-sm text-gray-500 hover:text-gray-800 hover:underline">Contactos</a></li>
+                    <li><a href="" class="text-sm text-gray-200 hover:text-gray-800 hover:underline">Sobre</a></li>
+                    <li><a href="" class="text-sm text-gray-200 hover:text-gray-800 hover:underline">Informações</a></li>
+                    <li><a href="" class="text-sm text-gray-200 hover:text-gray-800 hover:underline">Contactos</a></li>
                 </ul>
 
 

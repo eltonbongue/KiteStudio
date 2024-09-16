@@ -10,8 +10,21 @@ class ListNovidadesController extends Controller
 
 
     public function show(){
-      
-        $novidades = Novidade::all();
+
+
+
+
+        $search = request('search');
+        if ($search) {
+           
+                $novidades = Novidade::where([
+                    ['descricao','like','%'.$search.'%']
+                     ])->get();
+
+        } else {
+            $novidades = Novidade::all();
+        }
+        
         $U="#";
         $DA="#";
         $LE="active";
@@ -19,7 +32,7 @@ class ListNovidadesController extends Controller
         $G="#";     
         $LG="#";
        
-        return view('admin.lista_novidades', ['novidades' => $novidades, 'LE' => $LE, 'DA' => $DA,'U' => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
+        return view('admin.lista_novidades', ['novidades' => $novidades, 'search'=> $search ,'LE' => $LE, 'DA' => $DA,'U' => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
 
               
 }

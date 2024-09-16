@@ -137,9 +137,7 @@ Route::get('/sobre.blade.php', function () {
     return view('sobre');
 });
 
-Route::get('/trabalhos.blade.php', function () {
-    return view('trabalhos');
-});
+
 
 Route::get('/contactos.blade.php', function () {
     return view('contactos');
