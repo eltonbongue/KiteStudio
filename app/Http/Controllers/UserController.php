@@ -36,7 +36,7 @@ class UserController extends Controller
         $U="#";     
         $LG="#";
        
-        return view('admin.galeria', ['users' => $users, 'LE' => $LE, 'DA'=>$DA,"U" => $U, 'E' => $E, 'G' => $G, 'LG' => $LG,'search' => $search]);
+        return view('admin.galeria', ['users' => $users, 'LE' => $LE, 'DA'=>$DA,"U" => $U, 'E' => $E, 'G' => $G, 'LG' => $LG, 'search' => $search]);
         // Retorna a view com a lista de usuários
       
     }

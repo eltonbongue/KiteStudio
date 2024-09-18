@@ -15,6 +15,21 @@ class ListGaleriaController extends Controller
         $sessao = Session::all();
         $user = User::all();
 
+
+        $search= request('search');
+
+        if($search){
+
+            $user = User::where([
+
+                ['name','like','%'.$search.'%']
+            ])->get();
+        }
+        else{
+                $user = User::all();
+        }
+
+
         $U="#";
         $DA="#";
         $LE="#";
@@ -22,12 +37,13 @@ class ListGaleriaController extends Controller
         $G="#";     
         $LG="active";
 
-        $user = auth()->user();
-        $galeria = $user->galeria;
+        //$user = auth()->user();
+        //$galeria = $user->galeria;
     
 
+
         
-        return view('admin.lista_galeria', ['galeria' => $galeria, 'sessao' => $sessao, 'user' => $user ,  'LG' => $LG, 'LE' => $LE, 'DA' => $DA,'U' => $U, 'E' => $E, 'G' => $G]); 
+        return view('admin.lista_galeria', ['galeria' => $galeria, 'search' => $search ,'sessao' => $sessao, 'user' => $user ,  'LG' => $LG, 'LE' => $LE, 'DA' => $DA,'U' => $U, 'E' => $E, 'G' => $G]); 
 
 }
 

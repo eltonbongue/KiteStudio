@@ -117,7 +117,7 @@ Route::get('admin/galeria.blade.php', [UserController::class, 'index'], function
     
      return view('admin/galeria', ["G"=>$G , "U"=>$U,"DA"=>$DA, "E"=>$E , "LE"=>$LE, "LG"=>$LG]);
      
-})->middleware('auth');
+});
 
 Route::get('admin/lista_galeria.blade.php', [ListGaleriaController::class,'show'] , function () {
    

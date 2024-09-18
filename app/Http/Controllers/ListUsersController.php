@@ -20,7 +20,7 @@ class ListUsersController extends Controller
             $users = User::all();
         }
       
-        $users = User::all();
+       
         $U="active";
         $LE="#";
         $DA="#";

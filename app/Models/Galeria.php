@@ -15,7 +15,7 @@ class Galeria extends Model
      */
 
     protected $table = 'galeria';
-    protected $fillable= ['image','user_id'];
+    protected $fillable= ['image','user_id', 'admin_id'];
 
 
 
