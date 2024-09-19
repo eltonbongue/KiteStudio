@@ -56,7 +56,6 @@
                                                    <div class="form-group">  
                                                 <input type="text" id="user_id" name="user_id" class="form-control w-12" value="{{$users->id }}" hidden>                                             
                                                </div>
-
                                                   
                                             <button type="submit" class="mr-3 text-green-800 focus:outline-none">adicionar</button>
                                             </form>
@@ -65,11 +64,12 @@
                                             <form class="flex" action="/dashboard" method="post" enctype="multipart/form-data">
                                               @csrf
                                             <div class="form-group">
-                                              <label for="image"><img src="/img/video.png" class="w-4 mt-4 mr-4" alt="" required></label>
-                                               <input type="file" id="image" name="image" class="from-control-file" required> 
+
+                                              <label for="video"><img src="/img/video.png" class="w-4 mt-4 mr-4" alt="" required></label>
+                                               <input type="file" id="video" name="video" class="from-control-file" required> 
                                               </div>
 
-                                               <div>
+                                               <div class="form-group">
                                                
                                            <input type="text" id="user_id" name="user_id" class="form-control w-12" value="{{$users->id }}" hidden>                                             
                                           </div>

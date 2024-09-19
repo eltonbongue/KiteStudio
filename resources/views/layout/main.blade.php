@@ -61,7 +61,7 @@
                 <ul class="flex space-x-8">
                     <li><a href="" class="text-sm text-gray-200 hover:text-gray-800 hover:underline">Sobre</a></li>
                     <li><a href="" class="text-sm text-gray-200 hover:text-gray-800 hover:underline">Informações</a></li>
-                    <li><a href="" class="text-sm text-gray-200 hover:text-gray-800 hover:underline">Contactos</a></li>
+                    <li><a href="" class="text-sm text-gray-200 hover:text-gray-800 hover:underline">Contactos <strong>922 598 755, 924313254</strong> </a></li>
                 </ul>
 
 

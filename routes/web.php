@@ -159,6 +159,11 @@ Route::post('/dashboard',[galeriaController::class,'store']);
         return view('dashboard');
     })->name('dashboard')->middleware('auth');
 
+    Route::get('/videos.blade.php',[galeriaController::class, 'show'], function () {
+        return view('videos');
+    })->middleware('auth');
+
+   
 
 
 });

@@ -38,6 +38,23 @@ class galeriaController extends Controller
 }
 
 
+public function show(){
+
+    $galeria = Galeria::all();
+    $sessao = Session::all();
+    $user = User::all();
+
+
+
+    $user = Auth::user();
+            // Return a view with the user's name
+            
+            $galeria = $user->galeria;
+            return view('videos', ['galeria' => $galeria, 'sessao' => $sessao, 'user' => $user]); 
+
+
+}
+
 
 
 
@@ -45,7 +62,8 @@ class galeriaController extends Controller
     public function create() {
 
         return view('admin.galeria');
-}
+
+    }
 
     
        
@@ -84,12 +102,24 @@ class galeriaController extends Controller
             $galeria->image = $imageName;
 
         }
+
+
+         // Upload do vídeo
+    if ($request->hasFile('video') && $request->file('video')->isValid()) {
+        $requestVideo = $request->video;
+        $videoName = md5($requestVideo->getClientOriginalName() . strtotime("now")) . '.' . $requestVideo->extension();
+        $requestVideo->move(public_path('videos/galeria'), $videoName);
+        $galeria->video = $videoName;
+    }
         
         
 
+  
         $galeria->user_id = $request->input('user_id');
             $galeria-> save();
         
+
+            return redirect()->back();
        
         
 

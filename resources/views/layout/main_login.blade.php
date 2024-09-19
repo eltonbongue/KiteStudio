@@ -28,10 +28,10 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Fotos</a>
+                        <a class="nav-link" aria-current="page" href="/dashboard">Fotos</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Videos</a>
+                        <a class="nav-link" href="/videos.blade.php">Videos</a>
                       </li>
                      
                 
