@@ -27,10 +27,12 @@ class galeriaController extends Controller
             
             $galeria = $user->galeria;
             return view('dashboard', ['galeria' => $galeria, 'sessao' => $sessao, 'user' => $user]); 
-        } else {
+       // } else {
             // Redirect to login if no user is authenticated
-            return redirect()->route('login');
-        }
+        //    return redirect()->route('login');
+       
+    
+    }
        
               
 
@@ -114,7 +116,7 @@ public function show(){
         
         
 
-  
+
         $galeria->user_id = $request->input('user_id');
             $galeria-> save();
         

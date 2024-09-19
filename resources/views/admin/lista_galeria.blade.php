@@ -31,6 +31,7 @@
                                 <tr class="p-4 bg-slate-300">
                                     <th scope="col">#</th>
                                     <th scope="col">Imagem</th>
+                                    <th scope="col">Video</th>
                                     <th scope="col">Nome</th>
                                     <th scope="col">Acções</th>
                                 </tr>
@@ -42,6 +43,7 @@
                                         <tr>
                                             <td scropt="row">{{ $loop->index + 1 }}</td>
                                             <td><a href="img/eventos/{{$galeria->id}}">{{$galeria->image}}</a></td>
+                                            <td><a href="img/eventos/{{$galeria->id}}">{{$galeria->video}}</a></td>
                                             <td>bong</td>
                                          
                                             <td class="flex"><a href=""><img src="/img/editar.png" class="w-4 mr-4" alt=""></a>

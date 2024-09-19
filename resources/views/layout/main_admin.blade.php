@@ -116,7 +116,7 @@
       
       <!-- End Navbar -->
       
-        <div class="p-8 bg-blue-500 mb-32 ">
+        <div class="p-8 bg-gray-800 mb-32 ">
         <ul class="flex justify-center items-center space-x-8">
           <li class="text-gray-100"><a href="/">Home</a></li>
           <li class="text-gray-100">Galeria</li>

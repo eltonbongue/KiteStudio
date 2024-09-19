@@ -152,8 +152,8 @@ Route::middleware([
     'verified',
 ])->group(function () {
     
-    Route::get('/admin/galeria', [galeriaController::class, 'create']);
-Route::post('/dashboard',[galeriaController::class,'store']);
+   // Route::get('/admin/galeria', [galeriaController::class, 'create']);
+//Route::post('/dashboard',[galeriaController::class,'store']);
 
     Route::get('/dashboard',[galeriaController::class, 'index'], function () {
         return view('dashboard');
