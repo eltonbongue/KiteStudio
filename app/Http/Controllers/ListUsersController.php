@@ -34,6 +34,32 @@ class ListUsersController extends Controller
 }
 
 
+public function index(){
+
+    $search = request('search');
+    if ($search) {
+       
+            $users = User::where([
+                ['name','like','%'.$search.'%']
+                 ])->get();
+
+    } else {
+        $users = User::all();
+    }
+  
+    $G="active"; 
+    $LE="#";
+    $DA="#";
+    $E="#";   
+    $U="#";
+    $LG="#";
+   
+    return view('admin.galeria', ['users' => $users,'search' => $search, 'LE' => $LE, 'DA' => $DA,'U' => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
+
+          
+}
+
+
 
 
 

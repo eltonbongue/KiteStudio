@@ -105,7 +105,7 @@ return view('admin/lista_novidades', ["U"=>$U,'LE'=>$LE, 'DA'=>$DA,'E'=>$E , "G"
 });
 
 
-Route::get('admin/galeria.blade.php', [UserController::class, 'index'], function () {
+Route::get('admin/galeria.blade.php', [ListUsersController::class,'index'], function () {
    
     $G="active"; 
     $U="#";

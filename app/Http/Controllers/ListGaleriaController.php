@@ -16,17 +16,15 @@ class ListGaleriaController extends Controller
         $user = User::all();
 
 
-        $search= request('search');
+        $search = request('search');
 
-        if($search){
-
-            $user = User::where([
-
-                ['name','like','%'.$search.'%']
-            ])->get();
-        }
-        else{
-                $user = User::all();
+        if ($search) {
+            // Busca galerias onde o nome do usuário corresponde ao termo de busca
+            $galeria = Galeria::whereHas('user', function ($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%');
+            })->with('user')->get();
+        } else {
+            $galeria = Galeria::with('user')->get();
         }
 
 
@@ -39,8 +37,6 @@ class ListGaleriaController extends Controller
 
         //$user = auth()->user();
         //$galeria = $user->galeria;
-    
-
 
         
         return view('admin.lista_galeria', ['galeria' => $galeria, 'search' => $search ,'sessao' => $sessao, 'user' => $user ,  'LG' => $LG, 'LE' => $LE, 'DA' => $DA,'U' => $U, 'E' => $E, 'G' => $G]); 

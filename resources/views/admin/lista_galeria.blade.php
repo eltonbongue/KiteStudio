@@ -44,7 +44,7 @@
                                             <td scropt="row">{{ $loop->index + 1 }}</td>
                                             <td><a href="img/eventos/{{$galeria->id}}">{{$galeria->image}}</a></td>
                                             <td><a href="img/eventos/{{$galeria->id}}">{{$galeria->video}}</a></td>
-                                            <td>bong</td>
+                                            <td>{{ $galeria->user->name}}</td>
                                          
                                             <td class="flex"><a href=""><img src="/img/editar.png" class="w-4 mr-4" alt=""></a>
                                             <form action="{{ route('lista_galeria.destroy', $galeria->id) }}" method="POST">

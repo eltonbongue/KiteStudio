@@ -45,7 +45,7 @@
                                         <td>{{$novidade->descricao}}</td>
                                         <td class="flex"><a href=""><img src="/img/editar.png" class="w-4 mr-4" alt=""></a>
                                    
-                                        <form action="{{ route('lista_novidades.destroy', $novidade->admin_id) }}" method="POST">
+                                        <form action="{{ route('lista_novidades.destroy', $novidade->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                            <button type="submit"><img src="/img/lixo.png" class="w-4" alt=""></button> </td>
