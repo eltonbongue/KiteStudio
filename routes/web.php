@@ -40,8 +40,25 @@ Route::post('/dashboard',[galeriaController::class,'store']);
 Route::delete('/lista_galeria/{id}',[ListGaleriaController::class,'destroy'])->name('lista_galeria.destroy');
 Route::delete('/lista_novidades/{id}',[ListNovidadesController::class,'destroy'])->name('lista_novidades.destroy');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+Route::get('/admin/edit/{id}',[ListNovidadesController::class,'edit'])->name('lista_novidades.edit');
+Route::put('/admin/update/{id}',[ListNovidadesController::class,'update'])->name('lista_novidades.update');
 
 
+
+
+
+
+Route::get('admin/edit.blade.php',[ListNovidadesController::class, 'edit'],  function () {
+
+    $U="active";
+    $E="#";
+    $DA="#";
+    $G="#";
+    $LE="#";
+    $LG="#"; 
+    
+    return view('admin/edit', ['DA'=>$DA, 'U'=> $U, 'E'=>$E, 'G'=> $G, "LE"=>$LE, "LG"=>$LG]);
+});
 
 Route::get('admin/dashboard_admin.blade.php',[UserController::class, 'show'],  function () {
 

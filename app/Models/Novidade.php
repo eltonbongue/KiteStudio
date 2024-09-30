@@ -12,6 +12,7 @@ class Novidade extends Model
 
     protected $table = 'novidade';
     protected $fillable= ['image','descricao'];
+    protected $guarded = [];
 
 
     public function admin(){

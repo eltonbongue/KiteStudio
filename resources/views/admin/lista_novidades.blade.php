@@ -43,12 +43,12 @@
                                         <td scropt="row">{{ $loop->index + 1 }}</td>
                                         <td><a href="img/eventos/{{$novidade->id}}">{{$novidade->image}}</a></td>
                                         <td>{{$novidade->descricao}}</td>
-                                        <td class="flex"><a href=""><img src="/img/editar.png" class="w-4 mr-4" alt=""></a>
+                                        <td class="flex"><a href="{{ route('lista_novidades.edit', $novidade->id) }}"><img src="/img/editar.png" class="w-4 mr-4" alt=""></a>
                                    
                                         <form action="{{ route('lista_novidades.destroy', $novidade->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                           <button type="submit"><img src="/img/lixo.png" class="w-4" alt=""></button> </td>
+                                           <button type="submit"><img src="/img/lixo.png" class="w-4" alt="" ></button> </td>
                                        </form>
                                    
                                     </tr>

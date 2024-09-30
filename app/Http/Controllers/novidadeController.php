@@ -58,4 +58,9 @@ class novidadeController extends Controller
         return view('admin.dashboard_admin', ['userCount'=>$userCount,'novidadeCount'=>$novidadeCount,'DA'=>$DA,'LE' => $LE, "U" => $U, 'E' => $E, 'G' => $G, 'LG' => $LG]);
 
    }
+
+   
+
+   
+
 }
