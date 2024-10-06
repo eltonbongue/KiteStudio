@@ -1,4 +1,4 @@
-@extends('layout.main_admin')
+@extends('layout.main')
 
     @section('title', 'Editando')
 
@@ -10,7 +10,7 @@
 
     </div>
       <div id="event-create-container" class="col-md-6 offset-md-3">
-        <h1 class="mb-4 text-blue-500 bold">Crie uma Novidade</h1>
+        <h1 class="mb-4 text-blue-500 bold">Edite a Novidade</h1>
         <form action="{{ route('lista_novidades.update', $novidades->id) }}" method="post">
 
             @csrf
@@ -26,7 +26,7 @@
            <textarea name="descricao" id="descricao" class="form-control" placeholder="O que vai acontecer no evento?">{{$novidades->descricao}}</textarea>
           </div>
   
-        <input type="submit" class="btn btn-primary" value="editar novidade" id="botao">
+        <input type="submit" class="btn btn-primary mt-2" value="editar novidade" id="botao">
         </form>
       </div>
 
